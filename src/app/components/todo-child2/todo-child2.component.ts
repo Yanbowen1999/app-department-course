@@ -16,9 +16,9 @@ export class TodoChild2Component implements OnInit {
     this.data.forEach((value,i)=>{
       if(value.done){
         this.counter++;
-        this.local.set('list2',JSON.stringify(this.counter));
       }
     });
+    this.local.set('list2',this.counter);
   }
   delete(idx){
     this.data.splice(idx,1);
@@ -33,8 +33,12 @@ change(idx){
   
   constructor(private local:CommonService) { }
   ngOnInit() {
+    //localStorage.clear();
     if(this.local.get('list2')){
       this.counter= parseInt(this.local.get('list2'));
+    }
+    else{
+      this.counter=0;
     }
   }
 
