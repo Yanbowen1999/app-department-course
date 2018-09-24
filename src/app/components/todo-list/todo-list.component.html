@@ -1,0 +1,67 @@
+<input type='text ' [(ngModel)]='todo' (keydown)='fun($event)' placeholder="添加todo" />
+<h2>正在进行<span>{{todoList.length}}</span>
+</h2>
+<ol>
+    <li *ngFor='let item of todoList,let i=index'>
+        <div class="dname">
+            <input type="checkbox" (click)='change(i,true)' />
+            <label>{{todoList[i]}}</label>
+            <button (click)='del(i,true)'>删除</button>
+        </div>
+    </li>
+</ol>
+<h2>已经完成<span>{{doneList.length}}</span>
+</h2>
+<ol>
+    <li *ngFor='let item of doneList,let i=index'>
+        <div class="dname">
+            <input checked type="checkbox" (click)='change(i,false)' />
+            <label>{{doneList[i]}}</label>
+            <button (click)='del(i,false)'>删除</button>
+        </div>
+    </li>
+</ol>
+
+<!-- 老师的code -->
+<!-- 1.写输入框，绑定键盘事件 -->
+<!-- <input [(ngModel)]="txt" type="text" (keydown)="getValue($event)" /> -->
+<!-- $enevt事件对象
+<h3>正在进行<span>{{arr.length}}</span></h3> -->
+<!-- 2.写入待办事件呈现列表 -->
+<!-- <ul>
+    <li *ngFor='let item of arr;let i=index'>
+        index是每一个循环项的索引 -->
+<!-- <input (click)='change(i)' type="checkbox"> {{item}}
+        <button (click)="delete(i)">删除</button>
+    </li>
+
+</ul>
+<h3>已经完成<span>{{arr1.length}}</span></h3>
+<ul>
+    <li *ngFor='let item of arr1;let i=index'>
+        <input (click)='change1(i)' checked="checked" type="checkbox"> {{item}}
+        <button (click)="delete1(i)">删除</button>
+    </li>
+</ul> -->
+
+<!-- method2 -->
+<!-- <h3>todoList</h3>
+<input [(ngModel)]="txt" type="text" (keydown)="getValue($event)" />
+<h2>正在进行<span>{{arr.length-counter}}</span></h2>
+<ul>
+    <ng-container *ngFor='let item of arr,let i=index'>
+        <li *ngIf='!item.done'>
+            <input type="checkbox" (click)='change(i)' /> {{item.title}}
+            <button (click)='delete(i)'>删除</button>
+        </li>
+    </ng-container>
+</ul>
+<h2>已经完成<span>{{counter}}</span></h2>
+<ul>
+    <ng-container *ngFor='let item of arr,let i=index'>
+        <li *ngIf='item.done'>
+            <input checked type="checkbox" (click)='change(i)' /> {{item.title}}
+            <button (click)='delete(i)'>删除</button>
+        </li>
+    </ng-container>
+</ul> -->

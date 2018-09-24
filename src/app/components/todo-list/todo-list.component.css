@@ -1,0 +1,9 @@
+ul,
+ol {
+    list-style: none;
+}
+
+.dname {
+    background-color: whitesmoke;
+    margin: 5px;
+}

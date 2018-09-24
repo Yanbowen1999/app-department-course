@@ -1,0 +1,18 @@
+<h2>正在进行<span>{{data.length-counter}}</span></h2>
+<ul>
+    <ng-container *ngFor='let item of data,let i=index'>
+        <li *ngIf='!item.done'>
+            <input type="checkbox" (click)='change(i)' /> {{item.title}}
+            <button (click)='delete(i)'>删除</button>
+        </li>
+    </ng-container>
+</ul>
+<h2>已经完成<span>{{counter}}</span></h2>
+<ul>
+    <ng-container *ngFor='let item of data,let i=index'>
+        <li *ngIf='item.done'>
+            <input checked type="checkbox" (click)='change(i)' /> {{item.title}}
+            <button (click)='delete(i)'>删除</button>
+        </li>
+    </ng-container>
+</ul>
