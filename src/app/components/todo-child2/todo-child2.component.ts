@@ -8,29 +8,18 @@ import { CommonService } from '../../services/common.service';
 })
 export class TodoChild2Component implements OnInit {
   @Input() data;
-  //@Output()  changeI =new EventEmitter(); 
-  //@Output()  delIndex =new EventEmitter(); 
+  @Input() count;
+  @Output()  changeI =new EventEmitter(); 
+  @Output()  delIndex =new EventEmitter(); 
+ 
+  change(i){
+    this.changeI.emit(i);
+  }
+  delete(i){
+    this.delIndex.emit(i);
+  }
   counter:number=0;
-  count(){
-    this.counter=0;
-    this.data.forEach((value,i)=>{
-      if(value.done){
-        this.counter++;
-      }
-    });
-    this.local.set('list2',this.counter);
-  }
-  delete(idx){
-    this.data.splice(idx,1);
-    this.local.set('list',JSON.stringify(this.data));
-    this.count();
-  }
-change(idx){
-    this.data[idx].done=!this.data[idx].done;
-    this.local.set('list',JSON.stringify(this.data));
-    this.count();
-  }
-  
+
   constructor(private local:CommonService) { }
   ngOnInit() {
     //localStorage.clear();

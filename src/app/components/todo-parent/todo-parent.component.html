@@ -2,5 +2,5 @@
     <h2>todoList</h2>
 </app-todo-child1>
 
-<app-todo-child2 [data]='arr'>
+<app-todo-child2 (changeI)=change($event) (delIndex)=delete($event) [count]='counter' [data]='arr'>
 </app-todo-child2>
