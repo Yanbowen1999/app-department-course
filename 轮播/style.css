@@ -1,0 +1,60 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrap {
+    width: 1200px;
+    height: 397px;
+    border: 5px solid #000;
+    margin: 30px auto;
+    /*居中*/
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap a {
+    display: none;
+}
+
+.btn {
+    width: 1002px;
+    height: 73px;
+    background: url(img/3.png);
+    position: absolute;
+    bottom: 0;
+    left: 99px;
+}
+
+.btn span {
+    display: block;
+    /*行变成块才可以设置宽高*/
+    width: 40px;
+    height: 73px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 73px;
+    float: left;
+    cursor: pointer;
+}
+
+#next {
+    float: right;
+}
+
+.bannerNov {
+    float: left;
+    margin-left: 550px;
+    margin-top: 25px
+}
+
+.bannerNov>li {
+    float: left;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 50%;
+    list-style: none;
+    cursor: pointer;
+}
