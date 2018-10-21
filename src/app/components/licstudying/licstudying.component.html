@@ -1,0 +1,15 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let cla of classes">
+            <a [routerLink]="['./codetail',cla.id]">
+                <img src="{{cla.images}}" alt="">
+                <h5>{{cla.courseName}}</h5>
+                <span class='sum'>{{cla.sum}}</span>
+                <div>
+                    <span>课时{{cla.hour}}</span>
+                    <span class="sec">人数{{cla.person}}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

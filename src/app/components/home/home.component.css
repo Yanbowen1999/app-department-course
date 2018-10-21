@@ -1,0 +1,42 @@
+.left {
+    clear: both;
+    margin-left: 160px;
+    margin-top: 10px;
+    width: 170px;
+    float: left;
+}
+
+.left .left-msg img {
+    width: 170px;
+    height: 170px;
+}
+
+.left-msg p {
+    text-align: center;
+}
+
+.left .left-msg .count {
+    font-size: 1.6em;
+}
+
+a {
+    color: #333;
+    cursor: pointer;
+}
+
+.left-menu li :hover {
+    color: #ff6e3d;
+    border-radius: 10px;
+    background-color: rgba(255, 69, 0, 0.5);
+}
+
+.left-menu li {
+    widows: 155px;
+    height: 33px;
+}
+
+.left-menu li img {
+    width: 14px;
+    height: 13px;
+    float: right;
+}

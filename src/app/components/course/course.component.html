@@ -1,3 +1,31 @@
-<p>
-  course works!
-</p>
+<div class="nav">
+    <select name="" id="">
+        <option value="">课程分类</option>
+        <option value="">web前端开发</option>
+        <option value="">web后端开发</option>
+        <option value="">移动应用开发</option>
+        <option value="">软件测试</option>
+    </select>
+    <select name="" id="">
+        <option value="">课程系统</option>
+        <option value="">计算机基础技能</option>
+        <option value="">web前端工程师</option>
+        <option value="">Android开发工程师</option>
+        <option value="">MySQL数据库工程师</option>
+    </select>
+</div>
+<div class="container">
+    <ul>
+        <li *ngFor="let cla of classes">
+            <a [routerLink]="['/course',cla.id]">
+                <img src="{{cla.images}}" alt="">
+                <h5>{{cla.courseName}}</h5>
+                <span class='sum'>{{cla.sum}}</span>
+                <div>
+                    <span>课时{{cla.hour}}</span>
+                    <span class="sec">人数{{cla.person}}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

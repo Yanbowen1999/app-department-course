@@ -1,0 +1,47 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+    margin-left: 170px;
+    padding: auto;
+    float: left;
+}
+
+a {
+    color: #333;
+}
+
+.container li {
+    width: 230px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.container li h3 {
+    color: #333;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.container li div img {
+    width: 14px;
+    height: 15px;
+    margin: 0 8px;
+    opacity: 0.6;
+}
+
+.container li div .btn {
+    margin-left: 5px;
+    float: right;
+    background-color: #ff6e3d;
+    color: white;
+}
+
+.container li div .btn img {
+    width: 10px;
+    height: 10px;
+}

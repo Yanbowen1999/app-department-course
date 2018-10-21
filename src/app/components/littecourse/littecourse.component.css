@@ -1,0 +1,32 @@
+.list {
+    width: 770px;
+    /* height: 300px; */
+    padding: 20px 32px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+
+a {
+    color: #333;
+    cursor: pointer;
+}
+
+.title li {
+    float: left;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+.title li a:hover {
+    color: tomato;
+}
+
+hr {
+    margin-top: 50px;
+    margin-left: 20px;
+}

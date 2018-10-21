@@ -1,6 +1,6 @@
 nav {
     height: 50px;
-    background-color: #ccc;
+    background-color: rgb(247, 247, 247);
 }
 
 .nav {
@@ -10,9 +10,44 @@ nav {
     line-height: 50px;
 }
 
+.nav li img {
+    margin: 5px 240px 0px 75px;
+}
+
 .nav li {
     float: left;
-    margin: 0 30px;
+    margin: 0 15px;
     cursor: pointer;
     /* 鼠标划上的形状 */
+}
+
+
+/* search小图标 */
+
+form #insearch {
+    color: #9e9e9e;
+    width: 160px;
+    height: 30px;
+}
+
+form #sousuo {
+    margin: 0 auto;
+    width: 40px;
+    height: 30px;
+}
+
+
+/* bell列表 */
+
+.Tlist li {
+    display: none;
+    clear: both;
+    width: 120px;
+    height: 35px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .175);
+    text-align: center;
+}
+
+.nav li a .bell>a.link {
+    display: block;
 }

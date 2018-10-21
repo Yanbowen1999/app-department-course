@@ -1,27 +1,25 @@
-<p>
-    home works!
-</p>
-<!-- <div class='left'>
-    <ul>
-        <li>
-            <a [routerLink='' ]></a>
-        </li>
-        <li>
-            <a [routerLink='' ]></a>
-        </li>
-        <li>
-            <a [routerLink='' ]></a>
-        </li>
-        <li>
-            <a [routerLink='' ]></a>
-        </li>
-    </ul>
+<div class="left">
+    <div class="left-msg">
+        <!-- {{user.image}}
+        <span>{{uesr.usereName}}</span> -->
+        <span><img src="../../../assets/images/photo.png" alt=""></span>
+        <p>用户名</p>
+        <a><span class="count">0</span>
+            <span>粉丝</span>
+        </a>
+        <a><span class="count">0</span>
+            <span>关注</span>
+        </a>
+        <hr>
+    </div>
+    <div class='left-menu'>
+        <ul>
+            <li><a [routerLink]="['./task']" [style.color]="'#ff6e3d'">任务<img src="../../../assets/images/br_next.png" alt=""></a></li>
+            <li><a [routerLink]="['./tbk']">同步课<img src="../../../assets/images/br_next.png" alt=""></a></li>
+            <li><a [routerLink]="['./littecourse']">课程<img src="../../../assets/images/br_next.png" alt=""></a></li>
+            <li><a [routerLink]="['./qieshuo'] ">且说<img src="../../../assets/images/br_next.png" alt=""></a></li>
+            <li><a [routerLink]="['./notice']">通知<img src="../../../assets/images/br_next.png" alt=""></a></li>
+        </ul>
+    </div>
 </div>
-<div class="right">
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div> -->
+<router-outlet></router-outlet>

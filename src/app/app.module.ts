@@ -19,6 +19,21 @@ import { TongbuComponent } from './components/tongbu/tongbu.component';
 import { CourseComponent } from './components/course/course.component';
 import { ShequComponent } from './components/shequ/shequ.component';
 import { AppRoutingModule } from './/app-routing.module';
+import {HttpClientModule} from "@angular/common/http";
+import { TongbukedetailComponent } from './components/tongbukedetail/tongbukedetail.component';
+import { TaskComponent } from './components/task/task.component';
+import { TbkComponent } from './components/tbk/tbk.component';
+import { LittecourseComponent } from './components/littecourse/littecourse.component';
+import { QieshuoComponent } from './components/qieshuo/qieshuo.component';
+import { NoticeComponent } from './components/notice/notice.component';
+import { TaskUncommitComponent } from './components/task-uncommit/task-uncommit.component';
+import { TaskDoneComponent } from './components/task-done/task-done.component';
+import { TaskEndComponent } from './components/task-end/task-end.component';
+import { APipe } from './pipes/a.pipe';
+import { CodetailComponent } from './components/codetail/codetail.component';
+import { LicstudyingComponent } from './components/licstudying/licstudying.component';
+import { LicmyfocusComponent } from './components/licmyfocus/licmyfocus.component';
+import { LicmyseenComponent } from './components/licmyseen/licmyseen.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,23 +48,60 @@ import { AppRoutingModule } from './/app-routing.module';
     HomeComponent,
     TongbuComponent,
     CourseComponent,
-    ShequComponent
+    ShequComponent,
+    TongbukedetailComponent,
+    TaskComponent,
+    TbkComponent,
+    LittecourseComponent,
+    QieshuoComponent,
+    NoticeComponent,
+    TaskUncommitComponent,
+    TaskDoneComponent,
+    TaskEndComponent,
+    APipe,
+    CodetailComponent,
+    LicstudyingComponent,
+    LicmyfocusComponent,
+    LicmyseenComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       {path:'home',component:HomeComponent,
-      // children:[
-      //   {path:'',component:}]
+      children:[
+        {path:'task',component:TaskComponent,
+        children:[
+          {path:'taskUncommit',component:TaskUncommitComponent},
+          {path:'taskDone',component:TaskDoneComponent},
+          {path:'taskEnd',component:TaskEndComponent},
+          {path:'',redirectTo:'taskUncommit',pathMatch:'full'},
+        ]
       },
-      {path:'tongbu/:courseId',component:TongbuComponent},
+        {path:'tbk',component:TbkComponent},
+        {path:'littecourse',component:LittecourseComponent,
+          children:[
+            {path:'licstudy',component:LicstudyingComponent},
+            {path:'licmyfocus',component:LicmyfocusComponent},
+            {path:'licmyseen',component:LicmyseenComponent},
+            {path:'',redirectTo:'licstudy',pathMatch:'full'},
+          ]
+      },
+        {path:'qieshuo',component:QieshuoComponent},
+        {path:'notice',component:NoticeComponent},
+        {path:'',redirectTo:'task',pathMatch:'full'},
+      ]
+      },
+      {path:'tongbu',component:TongbuComponent},
+      {path:'tongbu/:courseId',component:TongbukedetailComponent},
       {path:'course',component:CourseComponent},
+      {path:'course/:courseId',component:CodetailComponent},
       {path:'shequ',component:ShequComponent},
       {path:'',redirectTo:'home',pathMatch:'full'},
       {path:"**",component:ShequComponent},
     ]),
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [CommonService,ShareService],
   //providers:[{provide:CommonService,useClass:Common2Service}],

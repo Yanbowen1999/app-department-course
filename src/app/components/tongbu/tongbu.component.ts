@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Router} from '@angular/router'
+import {ActivatedRoute,Router} from '@angular/router';
+import {HttpClient}  from "@angular/common/http";
 @Component({
   selector: 'app-tongbu',
   templateUrl: './tongbu.component.html',
@@ -8,16 +8,20 @@ import {Router} from '@angular/router'
 })
 export class TongbuComponent implements OnInit {
 
-  constructor(private router : ActivatedRoute,private route:Router) { }
+  constructor(private router : ActivatedRoute,private route:Router,private http:HttpClient) { }
   courseId:number;
+  courses;
   ngOnInit() {
-    //this.courseId=this.router.snapshot.params['courseId'];
-    this.router.params.subscribe((params)=>{
-      this.courseId=params['courseId'];
+    this.courseId=this.router.snapshot.params['courseId'];
+    // this.router.params.subscribe((params)=>{
+    //   this.courseId=params['courseId'];
+    // });
+    this.http.get('/api/courses').subscribe((data)=>{
+      this.courses=data;
     });
   }
-  go(){
-    this.route.navigate(['/tongbu',600],{queryParams:{id:1000}});
-  }
-
+  // go(){
+  //   this.route.navigate(['/tongbu',600],{queryParams:{id:1000}});
+  // }
+  
 }

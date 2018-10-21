@@ -1,30 +1,18 @@
-.nav select {
-    width: 102px;
-    height: 35px;
-    border-radius: 3px;
-}
-
-.nav {
-    clear: both;
-    margin-left: 170px;
-}
-
 .container {
-    width: 1200px;
-    margin: 0 auto;
-    clear: both;
-    margin-left: 170px;
-    padding: auto;
+    width: 770px;
+    padding: 0px 32px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-left: 20px;
     float: left;
 }
 
 .container li {
-    width: 238px;
-    height: 265px;
+    width: 180px;
+    height: 235px;
     float: left;
     margin-right: 10px;
     border: 1px solid #ddd;
-    margin-bottom: 20px;
     border-radius: 3px;
 }
 
@@ -34,8 +22,8 @@
 }
 
 .container li img {
-    width: 238px;
-    height: 130px;
+    width: 178px;
+    height: 100px;
 }
 
 .container li h5 {
@@ -65,5 +53,5 @@
 }
 
 .container li .sec {
-    margin-left: 100px;
+    margin-left: 50px;
 }

@@ -1,8 +1,30 @@
 <nav>
     <ul class='nav'>
+        <li><img src="../../../assets/images/logo.png"></li>
         <li><a [routerLink]="['/home']">首页</a></li>
-        <li><a [routerLink]="['/tongbu',100]">同步课</a></li>
+        <li><a [routerLink]="['/tongbu']">同步课</a></li>
         <li><a [routerLink]="['/course']">课程</a></li>
         <li><a [routerLink]="['/shequ']" [queryParams]="{id:800,name:'ll'}">社区</a></li>
+        <li>
+            <form>
+                <input id="insearch" type="search" placeholder="搜索课程，问答" />
+                <button id="sousuo" type="button">
+                    <i class="icon icon-bell">搜索</i>
+                </button>
+            </form>
+        </li>
+        <li>
+            <a class='bell' href=''>
+                bell<!-- <img src="../../../assets/images/bell.png"> -->
+            </a>
+            <ul class="Tlist">
+                <li><a>@我的</a></li>
+                <li><a>收到的赞</a></li>
+                <li><a>评论</a></li>
+            </ul>
+        </li>
+        <li>
+            <!-- photo -->
+        </li>
     </ul>
 </nav>
